@@ -15,7 +15,7 @@ def call(String imageName = "java-app:latest") {
 
         echo "Building Docker image: ${imageName}"
         sh """
-            docker build -t ${imageName} .
+            sudo docker build -t ${imageName} .
         """
         echo "Docker Image ${imageName} Built Successfully!"
     }
