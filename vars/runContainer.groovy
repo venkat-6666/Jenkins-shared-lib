@@ -6,7 +6,7 @@ def call(String imageName, String containerName, int hostPort, int containerPort
             echo "Starting new container..."
             docker run -d --name ${containerName} -p ${hostPort}:${containerPort} ${imageName}
         """
-        echo "✅ Container '${containerName}' is running on port ${hostPort}"
+        echo "Container '${containerName}' is running on port ${hostPort}"
     }
 }
 
