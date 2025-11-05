@@ -2,9 +2,10 @@ def call(String imageName = "java-app:latest", String containerName = "java-cont
     stage('Run Container') {
         echo "Running Container ${containerName}..."
         sh """
-            docker rm -f ${containerName} || true
             docker run -d --name ${containerName} -p ${port}:${port} ${imageName}
         """
         echo "Container ${containerName} is running on port ${port}"
     }
 }
+
+
