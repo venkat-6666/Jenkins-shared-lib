@@ -3,7 +3,7 @@ def call(String imageName = "java-app:latest") {
         echo "Creating Dockerfile dynamically..."
 
         writeFile file: 'Dockerfile', text: '''
-        FROM openjdk:17-jdk-slim
+        FROM openjdk:25-jdk-slim
         WORKDIR /app
         COPY target/*.jar app.jar
         EXPOSE 8080
